@@ -40,4 +40,5 @@ _STA 002 -_ [_https://www.vistec.ac.th/download/FM-STA-002%20FUND%20WITHDRAWAL%2
 3. ใบเสนอราคา
 4. [purchase request form](https://vistec-my.sharepoint.com/:x:/g/personal/1830805\_vistec\_ac\_th/EQv5yiCEMqRNqE-50gOsYcMBuYg80sW6-yO9exzPY-YT-Q?e=hxjtqb)
 5. TOR กรณีเกินสินค้าเกิน 100k
+6. เมื่อได้ของ ส่งใบเสร็จ และถ่ายรูปสินค้าที่ติดสติ๊กเกอร์แล้ว ให้ Admin
 
