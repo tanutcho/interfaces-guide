@@ -22,17 +22,3 @@ sudo nano /etc/fstab
 10.204.100.140:/volume1/<DriveVolumeName>       /home/brain/<FolderName>	nfs	defaults       0       2
 ```
 - to save CTRL+X -->  y --> Enter
-# 3. MacOs and Windows
-- [MacOS](https://www.synology.com/helpfile/help/DSM/5.2/dsm/enu/Tutorial/store_with_mac.html)
-- [Windows](https://www.synology.com/en-global/knowledgebase/DSM/help/DSM/Tutorial/store_with_windows)
-
-# :warning: If you found this error:exclamation: :warning:
-
-```diff
-- Connection reset by peer
-```
-- delete ssh-keygen in `~/.ssh/known_hosts` using this command
-
-```console
-foo@bar:~$ ssh-keygen -R 10.204.100.140
-```
