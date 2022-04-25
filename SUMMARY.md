@@ -13,7 +13,7 @@
 
 ## DGX Usage
 
-* [Untitled](dgx-usage/untitled.md)
+* [VISTEC IST Cluster](dgx-usage/vistec-ist-cluster.md)
 
 ## Payment
 
