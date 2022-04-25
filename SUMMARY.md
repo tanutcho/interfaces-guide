@@ -10,6 +10,9 @@
 ## NAS Usage
 
 * [Mout NAS via Docker](NAS-usage/Docker.md)
+* [Mout NAS via Ubuntu](NAS-usage/Ubuntu.md)
+* [MacOs and Windows](NAS-usage/Mac-and-Windows.md)
+* [Problem](NAS-usage/problem.md)
 
 ## DGX Usage
 
