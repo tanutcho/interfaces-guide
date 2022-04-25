@@ -10,7 +10,7 @@ For now, we have 3 NAS server.
 
 
 ### Create a Shared Folder
-- Go to NAS website (above links)
-- [Create a Shared Folder](https://kb.synology.com/th-th/DSM/help/DSM/AdminCenter/file_share_create?version=6)
-- [Assign Shared Folder Permissions](https://kb.synology.com/th-th/DSM/help/DSM/AdminCenter/file_share_privilege?version=6)
-- [Assign NFS Permissions](https://kb.synology.com/th-th/DSM/help/DSM/AdminCenter/file_share_privilege_nfs?version=6)
+1. Go to NAS website (above links)
+2. [Create a Shared Folder](https://kb.synology.com/th-th/DSM/help/DSM/AdminCenter/file_share_create?version=6)
+3. [Assign Shared Folder Permissions](https://kb.synology.com/th-th/DSM/help/DSM/AdminCenter/file_share_privilege?version=6)
+4. [Assign NFS Permissions](https://kb.synology.com/th-th/DSM/help/DSM/AdminCenter/file_share_privilege_nfs?version=6)
