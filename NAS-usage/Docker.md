@@ -11,8 +11,7 @@ docker run -ti --name $CONTAINER_NAME \
 --gpus $GPU_NUM  --memory=$MEMORY --cpus=$CPU \
 -v $YOUR_SRC_PATH:/mount \
 -p $PORT:22 \
---device /dev/fuse --cap-add SYS_ADMIN --privileged 
-$IMAGE bash
+--device /dev/fuse --cap-add SYS_ADMIN --privileged $IMAGE bash
 ```
 
 - install sshfs
