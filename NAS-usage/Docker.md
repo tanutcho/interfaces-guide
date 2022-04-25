@@ -30,7 +30,7 @@ apt-get install sshfs
 mkdir /mount/<FolderName>
 ```
 ```console
-sshfs -o allow_other,default_permissions brain@10.204.100.140:/<DriveVolumeName> /mount/<FolderName>
+sshfs -o allow_other,default_permissions brain@10.204.100.140:/<SharedFolder> /mount/<FolderName>
 ```
 
 or if you want to use SSH keys for authentication instead of password.
@@ -39,6 +39,6 @@ or if you want to use SSH keys for authentication instead of password.
 make sure that there is `/.ssh/your_private_key` in `$YOUR_SRC_PATH` in DGX-server
 
 ```console
-sshfs -o default_permissions brain@10.204.100.140:/<DriveVolumeName> ~/<FolderName> \
+sshfs -o default_permissions brain@10.204.100.140:/<SharedFolder> ~/<FolderName> \
 -o IdentityFile=/.ssh/your_private_key
 ```
