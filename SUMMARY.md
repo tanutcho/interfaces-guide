@@ -7,9 +7,9 @@
 * [Vision and Values](the-company/vision-and-values.md)
 * [สมาชิก INTERFACEs](the-company/meet-the-team.md)
 
-## NAS
+## NAS Usage
 
-* [Mout NAS via Docker](NAS/Docker.md)
+* [Mout NAS via Docker](NAS-usage/Docker.md)
 
 ## DGX Usage
 
