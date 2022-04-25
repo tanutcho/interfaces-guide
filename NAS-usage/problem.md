@@ -1,4 +1,6 @@
-# Connection reset by peer
+# Problem
+
+## Connection reset by peer
 
 - Delete ssh-keygen in `~/.ssh/known_hosts` using this command
 
