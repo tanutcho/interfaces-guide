@@ -2,9 +2,10 @@
 
 <img src="https://miro.medium.com/max/672/1*glD7bNJG3SlO0_xNmSGPcQ.png" alt="Docker" width="100"/>
 
+1. Create a container
 - add `--device /dev/fuse --cap-add SYS_ADMIN --privileged` when you create `CONTAINER`
 
-Example
+Example (Container)
 
 ```console
 docker run -ti --name $CONTAINER_NAME \
@@ -14,10 +15,29 @@ docker run -ti --name $CONTAINER_NAME \
 --device /dev/fuse --cap-add SYS_ADMIN --privileged $IMAGE bash
 ```
 
-- install sshfs
+Example (Jupyter Container)
+
+```console
+docker run --rm --gpus=$GPU_NUM \
+-it --net=host -v $YOUR_SRC_PATH:/mount \
+--name $CONTAINER_NAME \
+--device /dev/fuse --cap-add SYS_ADMIN --privileged \
+$IMAGE jupyter notebook --ip=0.0.0.0 --allow-root \
+--NotebookApp.token='brain12345' \
+--port $PORT --notebook-dir=/mount
+```
+
+2. Access container
+ - attach the Container
 ```console
 docker attach `CONTAINER_NAME`
 ```
+
+- or Jupyter Container 
+  - Go to Jupyter Container URL
+  - Create a new terminal: click `New` --> `Terminal`
+
+3. install sshfs
 ```console
 apt-get update -y
 ```
@@ -25,7 +45,7 @@ apt-get update -y
 apt-get install sshfs
 ```
 
-- mounting
+4. mounting
 ```console
 mkdir /mount/<FolderName>
 ```
