@@ -14,5 +14,6 @@
 
 ## Payment
 
+* [VISTEC - หัวบิล](payment/vistec.md)
 * [Purchase Guide - การทำเรื่องจัดซื้อ](payment/purchase-guide.md)
 * [Subject Payment - การเบิกจ่ายค่าตอบแทนผู้เข้าร่วมวิจัย](payment/subject-payment.md)
