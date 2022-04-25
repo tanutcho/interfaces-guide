@@ -4,13 +4,13 @@ cover: >-
 coverY: 0
 ---
 
-# สมาชิก INTERFACEs
+# Meet the Team!
 
 {% hint style="info" %}
 **Good to know:** an employee directory can be a great way to help new folks get familiar with everyone they're going to be working with.
 {% endhint %}
 
-## Theerawit
+## Esme DeWalt
 
 👋 CEO — 💌 esme@company.com — 🇺🇸 San Francisco (GMT-7)
 
