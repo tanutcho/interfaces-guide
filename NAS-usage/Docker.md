@@ -33,8 +33,9 @@ mkdir /mount/<FolderName>
 sshfs -o allow_other,default_permissions brain@10.204.100.140:/<DriveVolumeName> /mount/<FolderName>
 ```
 
-or if you want to use SSH keys for authentication instead of password, please send public key to me.
+or if you want to use SSH keys for authentication instead of password.
 [How to use ssh-keygen to generate a new SSH key](https://www.ssh.com/academy/ssh/keygen)
+
 make sure that there is `/.ssh/your_private_key` in `$YOUR_SRC_PATH` in DGX-server
 
 ```console
