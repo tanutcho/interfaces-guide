@@ -5,7 +5,7 @@
 ## The Company
 
 * [Vision and Values](the-company/vision-and-values.md)
-* [Meet the Team!](the-company/meet-the-team.md)
+* [สมาชิก INTERFACEs](the-company/meet-the-team.md)
 
 ## The Formal Stuff
 
@@ -13,6 +13,7 @@
 * [Filing Expenses](the-formal-stuff/filing-expenses.md)
 
 ## NAS
+
 * [Mout NAS via Docker](NAS/Docker.md)
 
 ## Payment
