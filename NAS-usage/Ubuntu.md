@@ -9,16 +9,16 @@ sudo apt-get install nfs-common
 ```
 - mounting
 ```console
-mkdir <path-to>/<FolderName>
+mkdir mount/<FolderName>
 ```
 ```console
-sudo mount -t nfs 10.204.100.140:/volume1/<SharedFolder> <path-to>/<FolderName>
+sudo mount -t nfs 10.204.100.140:/volume1/<SharedFolder> mount/<FolderName>
 ```
 - Add the following command to the `/etc/fstab` file
 ```console
 sudo nano /etc/fstab
 ```
 ```console
-  10.204.100.140:/volume1/<SharedFolder>      <path-to>/<FolderName>       nfs       defaults       0       2
+  10.204.100.140:/volume1/<SharedFolder>      mount/<FolderName>       nfs       defaults       0       2
 ```
 - to save CTRL+X -->  y --> Enter
