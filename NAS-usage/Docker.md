@@ -23,7 +23,7 @@ docker run --rm --gpus=$GPU_NUM \
 --name $CONTAINER_NAME \
 --device /dev/fuse --cap-add SYS_ADMIN --privileged \
 $IMAGE jupyter notebook --ip=0.0.0.0 --allow-root \
---NotebookApp.token='brain12345' \
+--NotebookApp.token='PASSWORD' \
 --port $PORT --notebook-dir=/mount
 ```
 
