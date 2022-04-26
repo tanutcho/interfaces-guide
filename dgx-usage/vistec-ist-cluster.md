@@ -62,10 +62,11 @@ Tue Apr 26 18:48:10 2022
 
 Exsample:
 ```
-brain2@IST-DGX02:~$ PID=1732733 ; docker ps --no-trunc | grep $(cat /proc/$PID/cgroup | grep -oE '[0-9a-f]{64}' | head -1) | sed 's/^.* //'
+PID=1732733 ; docker ps --no-trunc | grep $(cat /proc/$PID/cgroup | grep -oE '[0-9a-f]{64}' | head -1) | sed 's/^.* //'
 ```
 
 Result:
 ```
+brain2@IST-DGX02:~$ PID=1732733 ; docker ps --no-trunc | grep $(cat /proc/$PID/cgroup | grep -oE '[0-9a-f]{64}' | head -1) | sed 's/^.* //'
 narin-jupyter4
 ```
