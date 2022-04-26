@@ -2,6 +2,32 @@
 
 <img src="https://seeklogo.com/images/U/ubuntu-logo-8FDEC6A07B-seeklogo.com.png" alt="Ubuntu" width="70"/>
 
+### Mounting `<SharedFolder>` from NAS to docker container
+
+```
+NAS: 10.204.100.140
+
+volume1
+├── brain
+│   └── tantan
+│   └── file1
+├── Tanut_shared
+│   └── file1
+│   └── file2
+└── <SharedFolder>
+    └── <subfolder-2>
+    └── file1.xyz
+```
+
+```
+Ubuntu server: 10.204.100.xxx
+
+mount
+└── <FolderName>
+    └── <subfolder-2>
+    └── file1.xyz
+```
+
 - install nfs-common
 
 ```console
