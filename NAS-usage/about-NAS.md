@@ -10,7 +10,7 @@ For now, we have 3 NAS server.
 
 
 ```
-NAS: 10.204.100.140
+NAS:
 
 volume1
 ├── brain
