@@ -2,7 +2,7 @@
 
 <img src="https://miro.medium.com/max/672/1*glD7bNJG3SlO0_xNmSGPcQ.png" alt="Docker" width="100"/>
 
-### mounting `<SharedFolder>` from NAS to docker container
+### Mounting `<SharedFolder>` from NAS to docker container
 
 ```
 NAS: 10.204.100.140
