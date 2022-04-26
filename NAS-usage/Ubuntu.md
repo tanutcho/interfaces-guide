@@ -2,7 +2,7 @@
 
 <img src="https://seeklogo.com/images/U/ubuntu-logo-8FDEC6A07B-seeklogo.com.png" alt="Ubuntu" width="70"/>
 
-### Mounting `<SharedFolder>` from NAS to docker container
+### Mounting `<SharedFolder>` from NAS to Ubuntu server
 
 ```
 NAS: 10.204.100.140
