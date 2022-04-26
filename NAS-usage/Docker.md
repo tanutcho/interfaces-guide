@@ -2,6 +2,32 @@
 
 <img src="https://miro.medium.com/max/672/1*glD7bNJG3SlO0_xNmSGPcQ.png" alt="Docker" width="100"/>
 
+### mounting `<SharedFolder>` from NAS to docker container
+
+```
+NAS: 10.204.100.140
+
+volume1
+├── brain
+│   └── tantan
+│   └── file1
+├── Tanut_shared
+│   └── file1
+│   └── file2
+└── <SharedFolder>
+    └── <subfolder-2>
+    └── file1.xyz
+```
+
+```
+docker container: 10.204.100.192
+
+mount
+└── <FolderName>
+    └── <subfolder-2>
+    └── file1.xyz
+```
+
 1. Create a container
 - add `--device /dev/fuse --cap-add SYS_ADMIN --privileged` when you create `CONTAINER`
 
