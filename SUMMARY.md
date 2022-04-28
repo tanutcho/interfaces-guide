@@ -17,10 +17,12 @@
 
 ## DGX Usage
 
-* [VISTEC IST Cluster](dgx-usage/vistec-ist-cluster.md)
+* [VISTEC DGX Cluster](dgx-usage/vistec-ist-cluster.md)
 * [Create Container](dgx-usage/create-container.md)
 * [Create Jupyter Container](dgx-usage/create-jupyter-container.md)
-* [Using SLURM (IST Cluster)](dgx-usage/using-slurm-ist-cluster.md)
+
+## IST Cluster Usage
+* [Using SLURM (IST Cluster)](ist-cluster-usage/cluster-SLURM.md)
 
 ## Payment
 
