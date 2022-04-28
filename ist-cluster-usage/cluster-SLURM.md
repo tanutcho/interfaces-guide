@@ -1,4 +1,4 @@
-#  IST Cluster (SLURM)
+#  Using SLURM (IST Cluster)
 
 
 ## IST Cluster
