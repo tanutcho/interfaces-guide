@@ -8,7 +8,7 @@
 [No brainer Guide](https://amrestc.notion.site/No-brainer-Guide-to-SLURM-with-Python-based-program-with-Submit-It-49cd2585306b49f2805e475fa87e18ec)
 
 
-## Using SLURM with Conda
+## Using SLURM with Anaconda
 
 ### SSH to cluster
 [Example](https://gist.github.com/topsecret-cs/6c36234c90def65e1754809e6092ddc2)
