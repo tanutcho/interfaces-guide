@@ -16,19 +16,19 @@
 ssh -i ~/.ssh/vistec_theerawit theerawit@10.204.100.209
 ```
 ### Create and install Anaconda environment at ***frontend*** node
+- Get preinstalled Anaconda
 ```console
-1. Get preinstalled Anaconda
 module load Anaconda3
 ```
-2. Create an environment fit to your experiment
+- Create an environment that fit to your experiment
 ```console
 conda create -n my_env python=3.6.9
 ```
-3. Activate your env and install your dependencies
+- Activate your env and install your dependencies
 ```console
 source ~/.bashrc
 conda activate my_env
-pip install pip install tensorflow
+pip install tensorflow
 ```
 ### Create submission file `myjob.sub` to run your python code `my_experiment.py`
 
@@ -66,5 +66,5 @@ myjobs
 
 ### cancel a job
 ```console
-scancel *jobid*
+scancel $YOUR_JOBID
 ```
