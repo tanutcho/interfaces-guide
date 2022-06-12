@@ -10,8 +10,8 @@
 ## NAS Usage
 
 * [About NAS](NAS-usage/about-NAS.md)
-* [Mout NAS via Docker](NAS-usage/Docker.md)
-* [Mout NAS via Ubuntu](NAS-usage/Ubuntu.md)
+* [Mount NAS via Docker](NAS-usage/Docker.md)
+* [Mount NAS via Ubuntu](NAS-usage/Ubuntu.md)
 * [MacOs and Windows](NAS-usage/Mac-and-Windows.md)
 * [Problem](NAS-usage/problem.md)
 
@@ -22,6 +22,7 @@
 * [Create Jupyter Container](dgx-usage/create-jupyter-container.md)
 
 ## IST Cluster Usage
+
 * [Using SLURM (IST Cluster)](ist-cluster-usage/cluster-SLURM.md)
 
 ## Payment
