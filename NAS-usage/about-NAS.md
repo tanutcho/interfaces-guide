@@ -14,14 +14,18 @@ NAS:
 
 volume1
 ├── brain
-│   └── tantan
+│   └── <subfolder>
 │   └── file1
-├── Tanut_shared
+├── tantan
 │   └── file1
 │   └── file2
-└── <SharedFolder>
-    └── <subfolder-2>
-    └── file1.xyz
+├── <SharedFolder>
+│   └── <subfolder-2>
+│   └── file1.xyz
+volume2
+├── Tanut_shared
+    └── file1
+    └── file2
 ```
 
 
