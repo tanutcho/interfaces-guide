@@ -53,13 +53,12 @@ $IMAGE jupyter notebook --ip=0.0.0.0 --allow-root \
 --port $PORT --notebook-dir=/mount
 ```
 
-2. Access container
- - attach the Container
+2. Access the 'Container' or 'Jupyter'
+ - attach the 'Container'
 ```console
 docker attach `CONTAINER_NAME`
 ```
-
-- or Jupyter Container 
+- or 'Jupyter Container' 
   - Go to Jupyter Container URL
   - Create a new terminal: click `New` --> `Terminal`
 
