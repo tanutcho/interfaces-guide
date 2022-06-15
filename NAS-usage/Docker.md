@@ -7,16 +7,20 @@
 ```
 NAS: 10.204.100.140
 
-volume1
-├── brain
-│   └── tantan
-│   └── file1
-├── Tanut_shared
-│   └── file1
-│   └── file2
-└── <SharedFolder>
-    └── <subfolder-2>
-    └── file1.xyz
+- volume1
+  ├── brain
+  │   └── tantan
+  │   └── file1
+  ├── Tanut_shared
+  │   └── file1
+  │   └── file2
+  └── <SharedFolder>
+      └── <subfolder-2>
+      └── file1.xyz
+- volume2
+  └── Tanut_shared
+      └── file1
+      └── file2
 ```
 
 ```
@@ -45,7 +49,7 @@ Example (Jupyter Container)
 
 ```console
 docker run --rm --gpus=$GPU_NUM \
--it --net=host -v $YOUR_SRC_PATH:/mount \
+-ti --net=host -v $YOUR_SRC_PATH:/mount \
 --name $CONTAINER_NAME \
 --device /dev/fuse --cap-add SYS_ADMIN --privileged \
 $IMAGE jupyter notebook --ip=0.0.0.0 --allow-root \
