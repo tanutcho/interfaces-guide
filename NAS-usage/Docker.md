@@ -11,7 +11,7 @@ NAS: 10.204.100.140
   ├── brain
   │   └── tantan
   │   └── file1
-  ├── Tanut_shared
+  ├── <SharedFolder>
   │   └── file1
   │   └── file2
   └── <SharedFolder>
