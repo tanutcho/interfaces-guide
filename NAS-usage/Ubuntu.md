@@ -1,11 +1,11 @@
 # Mount NAS via Ubuntu
 
-<img src="https://seeklogo.com/images/U/ubuntu-logo-8FDEC6A07B-seeklogo.com.png" alt="Ubuntu" width="70"/>
+![Ubuntu](https://seeklogo.com/images/U/ubuntu-logo-8FDEC6A07B-seeklogo.com.png)
 
 ### Mounting `<SharedFolder>` from NAS to Ubuntu server
 
 ```
-NAS: 10.204.100.140
+NAS: n1-int.myds.me
 
 volume1
 ├── brain
@@ -28,23 +28,20 @@ mount
     └── file1.xyz
 ```
 
-- install nfs-common
+* install sshfs
 
-```console
-sudo apt-get install nfs-common
 ```
-- mounting
-```console
+sudo apt-get install sshfs
+```
+
+* mounting
+
+```
 mkdir mount/<FolderName>
 ```
-```console
-sudo mount -t nfs 10.204.100.140:/volume1/<SharedFolder> mount/<FolderName>
+
 ```
-- Add the following command to the `/etc/fstab` file
-```console
-sudo nano /etc/fstab
+sshfs -o default_permissions <YourUserName>@n1-int.myds.me:/<SharedFolder> ~/<FolderName>
 ```
-```console
-  10.204.100.140:/volume1/<SharedFolder>      mount/<FolderName>       nfs       defaults       0       2
-```
-- to save CTRL+X -->  y --> Enter
+
+* to save --> Enter
