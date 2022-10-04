@@ -47,5 +47,5 @@ sshfs <YourUserName>@n2-int.myds.me:/<SharedFolder> <MountPoint>
 * Unmount the remote FS
 
 ```
-fusermount -u ~/mnt
+fusermount -u <MountPoint>
 ```
