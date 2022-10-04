@@ -5,15 +5,14 @@
 ### Mounting `<SharedFolder>` from NAS to Ubuntu server
 
 ```
-NAS: n1-int.myds.me
+NAS-I: n1-int.myds.me
 
 volume1
-├── brain
-│   └── tantan
-│   └── file1
-├── Tanut_shared
-│   └── file1
-│   └── file2
+└── home
+    └── file1
+    └── file2
+
+NAS-II: n2-int.myds.me
 └── <SharedFolder>
     └── <subfolder-2>
     └── file1.xyz
@@ -22,8 +21,7 @@ volume1
 ```
 Ubuntu server: 10.204.100.xxx
 
-mount
-└── <FolderName>
+<MountPoint>
     └── <subfolder-2>
     └── file1.xyz
 ```
@@ -34,14 +32,20 @@ mount
 sudo apt-get install sshfs
 ```
 
-* mounting
+* Create the mountpoint
 
 ```
-mkdir mount/<FolderName>
+mkdir <MountPoint>
 ```
 
+* Invoke SSHFS with your SSH credentials and the remote location to mount
+
 ```
-sshfs -o default_permissions <YourUserName>@n1-int.myds.me:/<SharedFolder> ~/<FolderName>
+sshfs <YourUserName>@n2-int.myds.me:/<SharedFolder> <MountPoint>
 ```
 
-* to save --> Enter
+* Unmount the remote FS
+
+```
+fusermount -u ~/mnt
+```
