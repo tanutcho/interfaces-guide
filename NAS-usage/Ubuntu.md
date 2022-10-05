@@ -63,7 +63,7 @@ sudo apt install cifs-utils
 * Mount command
 
 ```
-sudo mount -t cifs -o username=<USERNAME>,password<>PASSWORD> \\
+sudo mount -t cifs -o username=<USERNAME>,password<PASSWORD> \\
 //n1-int.myds.me/<SharedFolder> <MountPoint>
 ```
 
