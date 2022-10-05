@@ -35,7 +35,7 @@ volume1
 ├── /Sleep-Private
 └── /Sleep-Public</code></pre>
 
-### Make inherited permissions
+### Make inherited permissions on `Co-Working_Space`
 
 1. Right-click on <mark style="color:green;">\<your-shared-sub-folder></mark>
 2. Properties --> Permission --> Advanced options --> Make inherited permissions explicit
