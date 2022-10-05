@@ -14,6 +14,7 @@
 * [Mount NAS via Ubuntu](NAS-usage/Ubuntu.md)
 * [MacOs and Windows](NAS-usage/Mac-and-Windows.md)
 * [Problem](NAS-usage/problem.md)
+* [Responsible](nas-usage/responsible.md)
 
 ## DGX Usage
 
