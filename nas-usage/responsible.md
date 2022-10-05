@@ -14,7 +14,7 @@ If you have to use write permission please ask supervisor on each group
 
 | Group Name                   | Default Permission | Supervisor |
 | ---------------------------- | ------------------ | ---------- |
-| users                        | Full Control       |            |
+| User                         | Read-Only          |            |
 | Sleep Public Access          | Read-Only          |            |
 | Sleep Private Access         | Read-Only          |            |
 | BCI Public Access            | Read-Only          |            |
