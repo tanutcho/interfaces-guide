@@ -19,7 +19,7 @@ NAS-II: n2-int.myds.me
 ```
 
 ```
-Ubuntu server: 10.204.100.xxx
+Client: 10.204.100.xxx
 
 <MountPoint>
     └── <subfolder-2>
