@@ -11,17 +11,17 @@ For now, we have 3 NAS server.
 {% code title="NAS-I: n1-int.myds.me" %}
 ```markup
 volume1
-├── /Nannapas        #private access
+├── /Nannapas                        # Private access
 │   └── <subfolder>
 │   └── file1
 volume2
-├── /home            #Full access, 1 TB for each user
+├── /home                            # Full access, 1 TB for each user
 │   └── <subfolder>
 │   └── file2
 └── /Co-Working_Space
-    └── <your-shared-sub-folder>         #Please make inherited permissions explicit
-    └── <your-shared-sub-folder>         #Please make inherited permissions explicit
-    └── <your-shared-sub-folder>         #Please make inherited permissions explicit
+    └── <your-shared-sub-folder>     # Please make inherited permissions explicit!
+    └── <your-shared-sub-folder>     # Please make inherited permissions explicit!
+    └── <your-shared-sub-folder>     # Please make inherited permissions explicit!
 ```
 {% endcode %}
 
