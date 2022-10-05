@@ -8,35 +8,28 @@ For now, we have 3 NAS server.
 * [INTERFACES-II Public-Private Dataset](http://10.204.100.139:5000/): 10.204.100.139 - n2-int.myds.me
 * [INTERFACES-III Sleep team](http://10.204.100.138:5000/): 10.204.100.138 - TBA
 
-{% code title="NAS-I: n1-int.myds.me" %}
-```markup
+```
+NAS:
+
 volume1
-├── /Nannapas        #private access
+├── brain
 │   └── <subfolder>
 │   └── file1
-volume2
-├── /home            #Full access, 1 TB for each user
-│   └── <subfolder>
+├── tantan
+│   └── file1
 │   └── file2
-└── /Co-Working_Space
-    └── <your-shared-sub-folder>         #Please make inherited permissions explicit
-    └── <your-shared-sub-folder>         #Please make inherited permissions explicit
-    └── <your-shared-sub-folder>         #Please make inherited permissions explicit
+├── <SharedFolder>
+│   └── <subfolder-2>
+│   └── file1.xyz
+volume2
+├── Tanut_shared
+    └── file1
+    └── file2
 ```
-{% endcode %}
-
-<pre class="language-markup" data-title="NAS-II: n2-int.myds.me"><code class="lang-markup"># Read-only access
-volume1
-<strong>├── /BCI-Public
-</strong>├── /EXOBIC
-├── /General-Private
-│   └── /PSU
-├── /Medical-Image-Private
-├── /Sleep-Private
-└── /Sleep-Public</code></pre>
-
-
 
 ### Create a Shared Folder
 
 1. Go to NAS website (above links)
+2. [Create a Shared Folder](https://kb.synology.com/th-th/DSM/help/DSM/AdminCenter/file\_share\_create?version=6)
+3. [Assign Shared Folder Permissions](https://kb.synology.com/th-th/DSM/help/DSM/AdminCenter/file\_share\_privilege?version=6)
+4. [Assign NFS Permissions](https://kb.synology.com/th-th/DSM/help/DSM/AdminCenter/file\_share\_privilege\_nfs?version=6)
