@@ -26,6 +26,8 @@ Ubuntu server: 10.204.100.xxx
     └── file1.xyz
 ```
 
+### Using SSHFS
+
 * install sshfs
 
 ```
@@ -48,4 +50,25 @@ sshfs <YourUserName>@n2-int.myds.me:/<SharedFolder> <MountPoint>
 
 ```
 fusermount -u <MountPoint>
+```
+
+### Using CIFS
+
+* To mount a Cifs file system, install the following utility
+
+```
+sudo apt install cifs-utils
+```
+
+* Mount command
+
+```
+sudo mount -t cifs -o username=<USERNAME>,password<>PASSWORD> \\
+//n1-int.myds.me/<SharedFolder> <MountPoint>
+```
+
+* Umount the remote FS
+
+```
+sudo umount <MountPoint>
 ```
