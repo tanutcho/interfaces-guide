@@ -35,3 +35,8 @@ volume1
 ├── /Sleep-Private
 └── /Sleep-Public</code></pre>
 
+### Make inherited permissions
+
+1. Right-click on <mark style="color:green;">\<your-shared-sub-folder></mark>
+2. Properties --> Permission --> Advanced options --> Make inherited permissions explicit
+3. Click "Create" to give permission to a specific user or group
