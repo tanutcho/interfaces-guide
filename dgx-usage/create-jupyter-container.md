@@ -10,7 +10,7 @@ So, you need to blind compute node’s port (server’s port) to your local mach
 
 #### 1. Login to DGX server <a href="#1-login-to-dgx-server" id="1-login-to-dgx-server"></a>
 
-```
+```bash
 DGX01 : 10.204.100.191: SCADS & VISION 
 DGX02 : 10.204.100.192: BRAIN
 ```
@@ -19,7 +19,7 @@ DGX02 : 10.204.100.192: BRAIN
 
 #### 2. Create your project directory <a href="#2-create-your-project-directory" id="2-create-your-project-directory"></a>
 
-```
+```bash
 mkdir project1
 ```
 
@@ -37,12 +37,12 @@ mkdir project1
    * Jupyter’s token: password
 2.  Pull image
 
-    ```
+    ```bash
     docker pull tensorflow/tensorflow:latest-gpu-jupyter 
     ```
 3.  Create container with previous configuration
 
-    ```
+    ```bash
     docker run -ti --name ist-container \
      --gpus 1  --memory=256GB --cpus=10 \
      -v /home/scads/project1:/mount \
@@ -75,7 +75,7 @@ mkdir project1
 4. Detach from container `Ctrl+P+Q`
 5.  In your local machine, start new terminal and run this command to blind Jupyter port.
 
-    ```
+    ```bash
     ssh -L 8888:10.204.100.191:8890 scads1@$10.204.100.191
     ```
 6. Access Jupyter Notebook from your browser `localhost:8888`

@@ -8,7 +8,7 @@
 
 #### 1. Login to DGX server <a href="#1-login-to-dgx-server" id="1-login-to-dgx-server"></a>
 
-```
+```bash
 DGX01 : 10.204.100.191: SCADS & VISION 
 DGX02 : 10.204.100.192: BRAIN
 ```
@@ -17,7 +17,7 @@ DGX02 : 10.204.100.192: BRAIN
 
 #### 2. Create your project directory <a href="#2-create-your-project-directory" id="2-create-your-project-directory"></a>
 
-```
+```bash
 mkdir project1
 ```
 
@@ -35,12 +35,12 @@ mkdir project1
 
     * find Docker images from [NVIDIA NGC](https://scads.ist.vistec.ac.th/cluster/docs/dgx/create-container.html) or list all local images by command `docker images`
 
-    ```
+    ```bash
      `docker pull nvcr.io/nvidia/tensorflow:19.11-tf2-py3`
     ```
 3.  Create container with previous configuration
 
-    ```
+    ```bash
     docker run -ti --name ist-container \
      --gpus 2  --memory=256GB --cpus=10 \
      -v /home/scads/project1:/mount \
@@ -60,12 +60,12 @@ mkdir project1
     `-p`: Map port from local machine to container, LOCAL\_PORT:CONTAINER\_PORT \\
 4.  Access container
 
-    ```
+    ```bash
     docker attach ist-container
     ```
 5.  Checking GPU is linked to container.
 
-    ```
+    ```bash
     nvidia-smi
     ```
 
@@ -76,7 +76,7 @@ mkdir project1
 
 #### 4. Stop container when finish. <a href="#4-stop-container-when-finish" id="4-stop-container-when-finish"></a>
 
-```
+```bash
 docker stop ist-container
 ```
 

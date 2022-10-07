@@ -1,11 +1,10 @@
-# VISTEC IST Cluster
+# VISTEC DGX Cluster
 
 [https://scads.ist.vistec.ac.th/cluster/system/](https://scads.ist.vistec.ac.th/cluster/system/)
 
-
 ### ตรวจสอบว่า PID จาก container ไหนใช้ GPUs
 
-```
+```bash
 brain2@IST-DGX02:~$ nvidia-smi
 Tue Apr 26 18:48:10 2022
 +-----------------------------------------------------------------------------+
@@ -61,12 +60,14 @@ Tue Apr 26 18:48:10 2022
 ```
 
 Exsample:
-```
+
+```bash
 PID=1732733 ; docker ps --no-trunc | grep $(cat /proc/$PID/cgroup | grep -oE '[0-9a-f]{64}' | head -1) | sed 's/^.* //'
 ```
 
 Result:
-```
+
+```bash
 brain2@IST-DGX02:~$ PID=1732733 ; docker ps --no-trunc | grep $(cat /proc/$PID/cgroup | grep -oE '[0-9a-f]{64}' | head -1) | sed 's/^.* //'
 narin-jupyter4
 ```
