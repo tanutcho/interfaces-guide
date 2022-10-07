@@ -4,60 +4,71 @@
 
 ### Mounting `<SharedFolder>` from NAS to Ubuntu server
 
-```markup
+```
 NAS-I: n1-int.myds.me
+
 volume1
-├── /Nannapas                        # Private access
-volume2
-├── /home                            # Full access, 1 TB for each user
-└── /Co-Working_Space
-    └── <your-shared-sub-folder>     # Please make inherited permissions explicit!
-    └── <your-shared-sub-folder>     # Please make inherited permissions explicit!
-    └── <your-shared-sub-folder>     # Please make inherited permissions explicit!
+└── home
+    └── file1
+    └── file2
+
+NAS-II: n2-int.myds.me
+└── <SharedFolder>
+    └── <subfolder-2>
+    └── file1.xyz
 ```
 
-<pre class="language-markup"><code class="lang-markup">Client: 10.204.100.xxx
-<strong>/mnt
-</strong>└── &#x3C;MountPoint></code></pre>
+```
+Client: 10.204.100.xxx
+
+<MountPoint>
+    └── <subfolder-2>
+    └── file1.xyz
+```
 
 ### Using SSHFS
 
 * install sshfs
 
-```bash
+```
 sudo apt-get install sshfs
+```
+
+* Create the mountpoint
+
+```
+mkdir <MountPoint>
 ```
 
 * Invoke SSHFS with your SSH credentials and the remote location to mount
 
-```bash
-sshfs <USERNAME>@n1-int.myds.me:/<SharedFolder> /mnt/<MountPoint>
+```
+sshfs <YourUserName>@n2-int.myds.me:/<SharedFolder> <MountPoint>
 ```
 
 * Unmount the remote FS
 
-```bash
-fusermount -u /mnt/<MountPoint>
+```
+fusermount -u <MountPoint>
 ```
 
 ### Using CIFS
 
 * To mount a Cifs file system, install the following utility
 
-```bash
+```
 sudo apt install cifs-utils
 ```
 
 * Mount command
 
-```bash
-sudo mount -t cifs -o username=<USERNAME>,password<PASSWORD> \
-//n1-int.myds.me/<SharedFolder> /mnt/<MountPoint>
+```
+sudo mount -t cifs -o username=<USERNAME>,password<PASSWORD> \\
+//n1-int.myds.me/<SharedFolder> <MountPoint>
 ```
 
 * Umount the remote FS
 
-```bash
+```
 sudo umount <MountPoint>
 ```
-
