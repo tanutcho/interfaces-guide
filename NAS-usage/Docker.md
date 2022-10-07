@@ -1,34 +1,43 @@
 # Mount NAS via Docker
 
-![Docker](https://miro.medium.com/max/672/1\*glD7bNJG3SlO0\_xNmSGPcQ.png)
+<img src="https://miro.medium.com/max/672/1*glD7bNJG3SlO0_xNmSGPcQ.png" alt="Docker" width="100"/>
 
 ### Mounting `<SharedFolder>` from NAS to docker container
 
-```markup
-NAS: n1-int.myds.me
-volume1
-├── /Nannapas                        # Private access
-volume2
-├── /home                            # Full access, 1 TB for each user
-└── /Co-Working_Space
-    └── <your-shared-sub-folder>     # Please make inherited permissions explicit!
-    └── <your-shared-sub-folder>     # Please make inherited permissions explicit!
-    └── <your-shared-sub-folder>     # Please make inherited permissions explicit!
+```
+NAS: 10.204.100.140
+
+- volume1
+  ├── brain
+  │   └── tantan
+  │   └── file1
+  ├── <SharedFolder>
+  │   └── file1
+  │   └── file2
+  └── <SharedFolder>
+      └── <subfolder-2>
+      └── file1.xyz
+- volume2
+  └── Tanut_shared
+      └── file1
+      └── file2
 ```
 
-```markup
+```
 docker container: 10.204.100.192
-/mount
-└── /<MountPoint>
+
+mount
+└── <FolderName>
+    └── <subfolder-2>
+    └── file1.xyz
 ```
 
 1. Create a container
-
-* add `--device /dev/fuse --cap-add SYS_ADMIN --privileged` when you create `CONTAINER`
+- add `--device /dev/fuse --cap-add SYS_ADMIN --privileged` when you create `CONTAINER`
 
 Example (Container)
 
-```bash
+```console
 docker run -ti --name $CONTAINER_NAME \
 --gpus $GPU_NUM  --memory=$MEMORY --cpus=$CPU \
 -v $YOUR_SRC_PATH:/mount \
@@ -38,51 +47,47 @@ docker run -ti --name $CONTAINER_NAME \
 
 Example (Jupyter Container)
 
-```bash
+```console
 docker run --rm --gpus=$GPU_NUM \
 -ti --net=host -v $YOUR_SRC_PATH:/mount \
 --name $CONTAINER_NAME \
---device /dev/fuse --cap-add SYS_ADMIN --privileged
+--device /dev/fuse --cap-add SYS_ADMIN --privileged \
 $IMAGE jupyter notebook --ip=0.0.0.0 --allow-root \
 --NotebookApp.token='PASSWORD' \
 --port $PORT --notebook-dir=/mount
 ```
 
-1. Access the 'Container' or 'Jupyter'
-
-* attach the 'Container'
-
-```bash
+2. Access the 'Container' or 'Jupyter'
+ - attach the 'Container'
+```console
 docker attach `CONTAINER_NAME`
 ```
+- or 'Jupyter Container' 
+  - Go to Jupyter Container URL
+  - Create a new terminal: click `New` --> `Terminal`
 
-* or 'Jupyter Container'
-  * Go to Jupyter Container URL
-  * Create a new terminal: click `New` --> `Terminal`
-
-1. install sshfs
-
-```bash
+3. install sshfs
+```console
 apt-get update -y
 ```
-
-```bash
+```console
 apt-get install sshfs
 ```
 
-1. mounting
-
-```bash
-sshfs -o allow_other,default_permissions <USERNAME>@n1-int.myds.me:/<SharedFolder> \
-/mount/<MountPoint>
+4. mounting
+```console
+mkdir /mount/<FolderName>
+```
+```console
+sshfs -o allow_other,default_permissions brain@10.204.100.140:/<SharedFolder> /mount/<FolderName>
 ```
 
-or if you want to use SSH keys for authentication instead of password. [How to use ssh-keygen to generate a new SSH key](https://www.ssh.com/academy/ssh/keygen)
+or if you want to use SSH keys for authentication instead of password.
+[How to use ssh-keygen to generate a new SSH key](https://www.ssh.com/academy/ssh/keygen)
 
 make sure that there is `/.ssh/your_private_key` in `$YOUR_SRC_PATH` in DGX-server
 
-```bash
-sshfs -o default_permissions <USERNAME>@n1-int.myds.me:/<SharedFolder> \
-/mount/<MountPoint> \
+```console
+sshfs -o default_permissions brain@10.204.100.140:/<SharedFolder> ~/<FolderName> \
 -o IdentityFile=/.ssh/your_private_key
 ```
